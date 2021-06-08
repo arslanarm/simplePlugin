@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>org.example.simplePlugin</id>
+    <name>EO</name>
+    <vendor email="a@a.com" url="https://a.com">A</vendor>
+
+    <description><![CDATA[
+        Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Simple File" implementationClass="SimpleFileType"
+                  fieldName="INSTANCE" language="Simple" extensions="simple"/>
+        <lang.parserDefinition language="Simple"
+                               implementationClass="SimpleParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="Simple"
+                                       implementationClass="SimpleSyntaxHighlighterFactory"/>
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

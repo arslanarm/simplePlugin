@@ -1,0 +1,19 @@
+{
+  parserClass="parser.SimpleParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Simple"
+  psiImplClassSuffix="Impl"
+  psiPackage="psi"
+  psiImplPackage="psi.impl"
+
+  elementTypeHolderClass="psi.SimpleTypes"
+  elementTypeClass="psi.SimpleElementType"
+  tokenTypeClass="psi.SimpleTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+property ::= (KEY? SEPARATOR VALUE?) | KEY
